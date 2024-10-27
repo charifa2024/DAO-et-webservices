@@ -1,0 +1,9 @@
+CREATE TABLE Commandes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    ref VARCHAR(50),
+    total DECIMAL(10, 2),
+    totalPaye DECIMAL(10, 2),
+    etat ENUM('initialised', 'pending', 'validated') DEFAULT 'initialised'
+);
+
+INSERT INTO `Commandes` (`id`, `ref`, `total`, `totalPaye`, `etat`) VALUES ('3', 'c3', '300', '0', 'initialised'), ('4', 'c4', '400', '0', 'initialised') 
